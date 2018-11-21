@@ -1,0 +1,15 @@
+{
+  "name": "codebit-urlizer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "codebit-urlizer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "url",
+    "urlizer"
+  ],
+  "author": "Cássio de Freitas e Silva",
+  "license": "MIT"
+}
