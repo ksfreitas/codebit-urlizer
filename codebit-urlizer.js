@@ -1,8 +1,8 @@
 function urlizer(value) {
-    const src = "áàãâéêíóôõúüñçÁÀÃÂÉÊÍÓÔÕÚÜÑÇ ";
-    const dst = "aaaaeeiooouuncAAAAEEIOOOUUNC-";
-    let map = {};
-    for (let i = 0; i < src.length; i++) {
+    var src = "áàãâéêíóôõúüñçÁÀÃÂÉÊÍÓÔÕÚÜÑÇ ";
+    var dst = "aaaaeeiooouuncAAAAEEIOOOUUNC-";
+    var map = {};
+    for (var i = 0; i < src.length; i++) {
         map[src.charAt(i)] = dst.charAt(i);
     }
 
@@ -13,19 +13,19 @@ function urlizer(value) {
     value = value.toLowerCase();
     value = replaceAll(value, '-', ' ');
     value = replaceAll(value, '_', ' ');
-    let tmp = '';
-    let splited = value.split(' ');
-    for (let i = 0; i < splited.length; ++i) {
-        const s = splited[i];
+    var tmp = '';
+    var splited = value.split(' ');
+    for (var i = 0; i < splited.length; ++i) {
+        var s = splited[i];
         if (s.trim().length != 0) {
             tmp += ' ' + s.trim();
         }
     }
     value = tmp.trim();
-    let out = '';
-    for (let i = 0; i < value.length; ++i) {
-        const char = value.charAt(i);
-        const translatedChar = map[char];
+    var out = '';
+    for (var i = 0; i < value.length; ++i) {
+        var char = value.charAt(i);
+        var translatedChar = map[char];
 
         if (translatedChar != null) {
             out += translatedChar;
@@ -41,7 +41,7 @@ function urlizerFilename(filename) {
     if (splited.length == 1) {
         return urlizer(filename);
     }
-    let tmp = '';
+    var tmp = '';
     for (var i = 0; i < splited.length - 1; i++) {
         tmp += splited[i];
     }
